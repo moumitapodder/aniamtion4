@@ -1,0 +1,87 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+}
+h3 {
+    font-size: 6em;
+    color:#333;
+    font-weight: 700;
+}
+h3 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+h3 span:nth-child(2)
+{
+    animation-delay: 0.2s;
+}
+h3 span:nth-child(4)
+{
+    animation-delay: 0.4s;
+}
+h3 span:nth-child(5)
+{
+    animation-delay: 0.6s;
+}
+h3 span {
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    0%,60%{
+        color: #333;
+        box-shadow: none;
+
+    }
+    100%
+    {
+        color:#fff;
+        Text-shadow: 0 0 10px #fff,
+        0 0 20px rgb(173, 0, 0),
+        0 0 30px #fff,
+        0 0 40px rgba(238, 0, 0, 0.068),
+        0 0 50px #fff;
+        
+
+    }
+
+}
+.container {
+    position: relative;
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+}
+    .bubble{
+       position: relative;
+    
+       display:flex;
+    }
+    .bubble span {
+        width:30px;
+        height:30px;
+        position:relative;
+        background-color: aqua;
+        margin:0 4px;
+        border-radius: 50%;
+        box-shadow:0 0 0 10px burlywood,
+        0 0 50px burlywood,
+        0 0 100px burlywood;
+        animation:animatee 15s linear infinite
+    }
+    @keyframes animatee {
+        0%{
+            transform: translatey(100vh) scale(0);
+        }
+        100%{
+            transform:translateY(-10vh)scale(0)
+        }
+    }
